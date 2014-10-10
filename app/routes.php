@@ -16,6 +16,7 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('login', ['uses' => 'UsersController@login']);
-Route::get('logout', ['uses' => 'UsersController@logout']);
-Route::get('register', ['uses' => 'UsersController@register']);
+Route::get( 'login', [ 'uses' => 'UsersController@login' ] );
+Route::get( 'logout', [ 'uses' => 'UsersController@logout' ] );
+Route::get( 'register', [ 'uses' => 'UsersController@register' ] );
+Route::get( 'dashboard' [ 'before' => 'auth', 'uses' => 'UsersController@dashboard' ] );
