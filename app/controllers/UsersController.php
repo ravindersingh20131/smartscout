@@ -116,7 +116,13 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 	public function dashboard() {
-		echo "dashboard feed page!";
+
+		if( Sentry::check() ) {
+			return "dashboard feed page!";
+		} else {
+			return Redirect::to('login');
+		}
+		
 	}
 
 }

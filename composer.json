@@ -8,7 +8,8 @@
 		"barryvdh/laravel-debugbar": "1.*",
 		"cartalyst/sentry": "dev-master",
 		"way/generators": "~2.0",
-		"sajjadrad/invi": "dev-master"
+		"sajjadrad/invi": "dev-master",
+		"nesbot/Carbon": "*"
 	},
 	"autoload": {
 		"classmap": [
