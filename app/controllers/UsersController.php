@@ -89,7 +89,7 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 	public function login() {
-		//
+		echo "login page!";
 	}
 
 	/**
@@ -98,7 +98,7 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 	public function logout() {
-		//
+		echo "logout page!";
 	}
 
 	/**
@@ -107,7 +107,7 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 	public function register() {
-		//
+		echo "registration page!";
 	}
 
 	/**
@@ -116,7 +116,7 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 	public function dashboard() {
-		//
+		echo "dashboard feed page!";
 	}
 
 }
