@@ -2,6 +2,8 @@
 
 class UsersController extends \BaseController {
 
+	public $layout = 'layouts.user';
+
 	/**
 	 * Display a listing of the resource.
 	 * GET /users

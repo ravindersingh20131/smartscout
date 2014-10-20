@@ -1,6 +1,6 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
+	"name": "SmartScout",
+	"description": "SmartScout application built in laravel",
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
@@ -9,7 +9,9 @@
 		"cartalyst/sentry": "dev-master",
 		"way/generators": "~2.0",
 		"sajjadrad/invi": "dev-master",
-		"nesbot/Carbon": "*"
+		"nesbot/Carbon": "*",
+		"patricktalmadge/bootstrapper": "~5",
+		"fzaninotto/faker": "1.5.*@dev"
 	},
 	"autoload": {
 		"classmap": [
