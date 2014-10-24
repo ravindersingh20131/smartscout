@@ -91,7 +91,10 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 	public function login() {
-		echo "login page!";
+
+		View::share('title', 'Login Page');
+
+		return $this->layout->content = "login page";
 	}
 
 	/**
@@ -100,7 +103,10 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 	public function logout() {
-		echo "logout page!";
+		
+		View::share('title', 'Logout Page');
+
+		return $this->layout->content = "logout page";
 	}
 
 	/**
@@ -109,7 +115,10 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 	public function register() {
-		echo "registration page!";
+		
+		View::share('title', 'Registration Page');
+
+		return $this->layout->content = "registration page";
 	}
 
 	/**
@@ -120,7 +129,10 @@ class UsersController extends \BaseController {
 	public function dashboard() {
 
 		if( Sentry::check() ) {
-			return "dashboard feed page!";
+			
+			View::share('title', 'Dashboard Page');
+			return $this->layout->content = "dashboard page";
+		
 		} else {
 			return Redirect::to('login');
 		}
