@@ -35,7 +35,7 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
-	if (Sentry::check())
+	if (!Sentry::check())
 	{
 		if (Request::ajax())
 		{

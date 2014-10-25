@@ -127,15 +127,9 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 	public function dashboard() {
-
-		if( Sentry::check() ) {
 			
-			View::share('title', 'Dashboard Page');
-			return $this->layout->content = "dashboard page";
-		
-		} else {
-			return Redirect::to('login');
-		}
+		View::share('title', 'Dashboard Page');
+		return $this->layout->content = "dashboard page";
 		
 	}
 
