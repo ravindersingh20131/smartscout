@@ -10,7 +10,6 @@
 		"way/generators": "~2.0",
 		"sajjadrad/invi": "dev-master",
 		"nesbot/Carbon": "*",
-		"patricktalmadge/bootstrapper": "~5",
 		"fzaninotto/faker": "1.5.*@dev"
 	},
 	"autoload": {
