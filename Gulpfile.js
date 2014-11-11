@@ -1,4 +1,5 @@
 var elixir = require('laravel-elixir');
+var gulp = require('gulp');
 
 /*
  |----------------------------------------------------------------
@@ -11,6 +12,24 @@ var elixir = require('laravel-elixir');
  |
  */
 
+var paths = {
+    'bootstrap': './components/bootstrap-sass-official/assets/'
+}
+
+gulp.task('copybootstrap', function() {
+    gulp.src(paths.bootstrap + '**/bootstrap.js')
+        .pipe(gulp.dest('./public/assets/js'));
+    gulp.src(paths.bootstrap + '**/*.{ttf,woff,eof,svg}')
+        .pipe(gulp.dest('./public/assets/'));
+});
+
 elixir(function(mix) {
-    mix.sass("bootstrap.scss");
+
+	//mix.sass( "style.scss", 'public/css/', { includePaths: [ paths.bootstrap + 'stylesheets/' ] } );
+    /*mix.sass("bootstrap.scss")
+    	.version()
+    	.scripts()
+    	.routes()
+    	.events();*/
+
 });
