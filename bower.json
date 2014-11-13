@@ -14,5 +14,11 @@
     "components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.1",
+    "requirejs": "~2.1.15",
+    "modernizr": "~2.8.3",
+    "font-awesome-bower": "~4.2.0"
+  }
 }
