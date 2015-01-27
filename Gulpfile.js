@@ -1,4 +1,4 @@
-var elixir = require('laravel-elixir'),
+var //elixir = require('laravel-elixir'),
     gulp = require('gulp'),
     sass = require('gulp-sass'),
     uglify = require('gulp-uglify'),
@@ -28,6 +28,7 @@ var paths = {
     src: {
         bootstrap: './components/bootstrap-sass-official/assets/',
         fontawesome: './components/fontawesome/scss',
+        fontawesomeCss: './components/fontawesome/css',
         bower: "./components/",
         css: "source/assets/sass/",
         js: "source/assets/js/"
@@ -71,10 +72,15 @@ gulp.task( 'icon-fonts', function() {
         .pipe(notify({ message: 'font awesome fonts copied' }));
 });
 
+gulp.task('copy-fontawesome-css', function() {
+    return gulp.src( paths.src.fontawesomeCss + '/font-awesome.min.css' )
+            .pipe( gulp.dest( paths.out.css ) );
+});
+
 /*elixir(function(mix) {
     
     //mix.sass( 'style.scss', 'public/assets/css', { includePaths: [ paths.bootstrap + 'stylesheets/' ] } );
     //mix.sass( 'style.scss', 'public/assets/css/').version( [ 'assets/css/bootstrap.css' ] );
-	//mix.sass( "bootstrap.scss", 'public/assets/css/bootstrap/', { includePaths: [ paths.bootstrap + 'stylesheets/' ] } ).version( ['assets/css/bootstrap.css' ] );
+    //mix.sass( "bootstrap.scss", 'public/assets/css/bootstrap/', { includePaths: [ paths.bootstrap + 'stylesheets/' ] } ).version( ['assets/css/bootstrap.css' ] );
 
 });*/
