@@ -74,7 +74,8 @@ gulp.task( 'icon-fonts', function() {
 
 gulp.task('copy-fontawesome-css', function() {
     return gulp.src( paths.src.fontawesomeCss + '/font-awesome.min.css' )
-            .pipe( gulp.dest( paths.out.css ) );
+            .pipe( gulp.dest( paths.out.css ) )
+            .pipe(notify({ message: 'fontawesome css copied successfully!' }));
 });
 
 /*elixir(function(mix) {
