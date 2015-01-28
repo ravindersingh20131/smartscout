@@ -1,6 +1,63 @@
-@import "components/bootstrap-sass-official/assets/stylesheets/bootstrap";
-@import "components/fontawesome/scss/font-awesome-bower";
+@import "components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss"; 
+/*@import "components/fontawesome/scss/font-awesome-bower";*/
 
-#importContainer {
-    background-color: black
+/** Global styles **/
+
+.btn-primary {
+	background-color: #f6403f;
+	color: white;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	//padding: 10px 30px;
+	//border-bottom: 1px solid rgba( 255, 255, 255, 0.5 );
+	border: none;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: #f6403f;
+	}	
+
 }
+
+/** END GLOBAL **/
+
+/** Navbar styles **/
+.navbar {
+	background-color: #0d0d0d;
+	border: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+.navbar-nav {
+	& li > a {
+		color: white !important;
+	}
+}
+/** END NAVBAR **/
+
+/** Sidebar Styles **/
+
+#sidebar-nav {
+	background-color: #2e2e2e;
+	padding: 10px;
+	color: white;
+	height: 100%;
+
+}
+
+#sidebar {
+
+	& > h3 {
+		color: white;
+		text-transform: uppercase;
+		padding: 30px 5px;
+		text-align: center;
+		background-color: #6ebdcc;
+		margin: 0;
+	}
+}
+
+/** END SIDEBAR **/

@@ -2,8 +2,6 @@
 
 class UsersController extends \BaseController {
 
-	public $layout = 'layouts.user';
-
 	/**
 	 * Display a listing of the resource.
 	 * GET /users
@@ -93,8 +91,8 @@ class UsersController extends \BaseController {
 	public function login() {
 
 		View::share('title', 'Login Page');
-
-		return $this->layout->content = "login page";
+		View::make( 'login' )->with('title', 'Login page!');
+		//return $this->layout->content = "login page";
 	}
 
 	/**
@@ -106,7 +104,7 @@ class UsersController extends \BaseController {
 		
 		View::share('title', 'Logout Page');
 
-		return $this->layout->content = "logout page";
+		//return $this->layout->content = "logout page";
 	}
 
 	/**
@@ -118,7 +116,7 @@ class UsersController extends \BaseController {
 		
 		View::share('title', 'Registration Page');
 
-		return $this->layout->content = "registration page";
+		//return $this->layout->content = "registration page";
 	}
 
 	/**
@@ -127,10 +125,7 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 	public function dashboard() {
-			
-		View::share('title', 'Dashboard Page');
-		return $this->layout->content = "dashboard page";
-		
+		return View::make('user.dashboard')->with('title', 'Dashboard Page');
 	}
 
 }

@@ -19,4 +19,5 @@ Route::get('/', function()
 Route::get( 'login', [ 'uses' => 'UsersController@login' ] );
 Route::get( 'logout', [ 'uses' => 'UsersController@logout' ] );
 Route::get( 'register', [ 'uses' => 'UsersController@register' ] );
-Route::get( 'dashboard', [ 'before' => 'auth', 'uses' => 'UsersController@dashboard' ] );
+//Route::get( 'dashboard', [ 'before' => 'auth', 'uses' => 'UsersController@dashboard' ] );
+Route::get( 'dashboard', [ 'uses' => 'UsersController@dashboard' ] );
