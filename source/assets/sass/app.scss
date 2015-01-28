@@ -35,7 +35,22 @@
 	& li > a {
 		color: white !important;
 	}
+
+	& .dropdown-toggle {
+		margin-top: 5px;
+	}
 }
+
+.dropdown-toggle {
+	background-color: #0d0d0d !important;
+}
+
+.dropdown-menu {
+	& li > a {
+		color: #0d0d0d !important;
+	}
+}
+
 /** END NAVBAR **/
 
 /** Sidebar Styles **/
@@ -45,6 +60,14 @@
 	padding: 10px;
 	color: white;
 	height: 100%;
+
+	& ul {
+		margin-bottom: 90%;
+	}
+
+	.btn-primary {
+		margin-top: 100%;
+	}
 
 }
 

@@ -29,6 +29,7 @@ var paths = {
         bootstrap: './components/bootstrap-sass-official/assets/',
         fontawesome: './components/fontawesome/scss',
         fontawesomeCss: './components/fontawesome/css',
+        requirejs: './components/requirejs',
         bower: "./components/",
         css: "source/assets/sass/",
         js: "source/assets/js/"
@@ -76,6 +77,20 @@ gulp.task('copy-fontawesome-css', function() {
     return gulp.src( paths.src.fontawesomeCss + '/font-awesome.min.css' )
             .pipe( gulp.dest( paths.out.css ) )
             .pipe(notify({ message: 'fontawesome css copied successfully!' }));
+});
+
+gulp.task('copy-requirejs', function() {
+    return gulp.src( paths.src.requirejs + '/*.js' )
+            .pipe( gulp.dest( paths.out.js ) )
+            .pipe( notify( { message: 'requirejs copied successfully into assets folder!' } ) );
+});
+
+gulp.task('minify-bootstrapjs', function() {
+    return gulp.src( paths.src.bootstrap + '/javascripts/bootstrap.js' )
+            .pipe(uglify())
+            .pipe(rename({ suffix: '.min' }))
+            .pipe( gulp.dest( paths.out.js + '/javascripts' ) )
+            .pipe( notify( { message: 'twitter bootstrap copied and minified!' } ) );
 });
 
 /*elixir(function(mix) {
