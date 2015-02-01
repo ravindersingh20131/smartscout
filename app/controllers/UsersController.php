@@ -90,9 +90,73 @@ class UsersController extends \BaseController {
 	 */
 	public function login() {
 
-		View::share('title', 'Login Page');
-		View::make( 'login' )->with('title', 'Login page!');
+		return View::make( 'login' )->with('title', 'Login page!');
 		//return $this->layout->content = "login page";
+		
+	}
+
+	/**
+	 * Processes user login
+	 * 
+	 * @return Illuminate\Routing\Redirector
+	 */
+	public function processLogin() {
+
+		// validate the info, create rules for the inputs
+		$rules = array(
+			'loginEmail' => 'required|email', // make sure the email is an actual email
+			'loginPass' => 'required|alphaNum|min:3' // password can only be alphanumeric and has to be greater than 3 characters
+		);
+
+		// run the validation rules on the inputs from the form
+		$validator = Validator::make(Input::all(), $rules);
+
+		// if the validator fails, redirect back to the form
+		if ($validator->fails()) 
+		{
+
+			return Redirect::to('login')
+				->withErrors($validator) // send back all errors to the login form
+				->withInput(Input::except('loginPass')); // send back the input (not the password) so that we can repopulate the form
+		} 
+		else 
+		{
+			// create our user data for the authentication
+			$userdata = array(
+				'email' 	=> Input::get('loginEmail'),
+				'password' 	=> Input::get('loginPass')
+			);
+
+			//for "remember me" checkbox
+			$remember = false;
+
+			//if checkbox is checked, name wont equal null
+			if(Input::get('remember_user') !== NULL)
+			{
+				$remember = true;
+			}
+
+			// attempt to do the login
+			if (Sentry::authenticate($userdata, $remember)) 
+			{
+
+			
+				// validation successful!
+				// redirect them to the dashboard section
+				return Redirect::to('dashboard');
+				// for now we'll just echo success (even though echoing in a controller is bad)
+				//echo 'SUCCESS!';
+
+			} 
+			else 
+			{	 
+				//echo "failed!";	
+				// validation not successful, send back to form	
+				return Redirect::to('login')->with('flash_message', 'Login failed!');
+
+			}
+		}
+
 	}
 
 	/**

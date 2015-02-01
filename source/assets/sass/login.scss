@@ -1,0 +1,25 @@
+html {
+	.login {
+		background-color: #2e2e2e;
+	}
+}
+
+.login {
+
+	margin-top: 50px;
+
+	label {
+		color: white;
+	}
+
+	button {
+		padding: 10px 15px;
+	}
+
+}
+
+.login-submit {
+	& > button:nth-last-child(1) {
+		background-color: #6ebdcc;
+	}
+}
