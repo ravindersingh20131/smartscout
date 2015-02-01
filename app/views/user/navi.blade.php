@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span><img src="http://placehold.it/32x32" width="32" height="32" class="img-circle" /></span> Julie Paa</a></li>
+        <li><a href="/{{ Sentry::getUser()->first_name }}"><span><img src="http://placehold.it/32x32" width="32" height="32" /></span> {{ Sentry::getUser()->username }}</a></li>
         <!--<li><a href="#">Inbox</a></li>
         <li><a href="#">Friends</a></li>-->
 
