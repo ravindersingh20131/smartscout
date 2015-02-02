@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder {
 		//create leo's user
 		$user = Sentry::createUser(array(
     	    'email'     => 'ghost@smartscout.me',
-    	    'password'  => Hash::make('ghost123'),
+    	    'password'  => 'c00kies2000',
     	    'activated' => true,
     	    'first_name' => 'Leo',
     	    'username' => 'humse'
@@ -30,7 +30,7 @@ class UsersTableSeeder extends Seeder {
     	//create Hamilton's user
     	$user = Sentry::createUser(array(
     	    'email'     => 'hdaza@smartscout.me',
-    	    'password'  => Hash::make('hdaza123'),
+    	    'password'  => 'c00kies',
     	    'activated' => true,
     	    'first_name' => 'Hamilton'
     	));
