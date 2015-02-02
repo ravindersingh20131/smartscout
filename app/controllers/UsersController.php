@@ -196,7 +196,11 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 	public function dashboard() {
-		return View::make('user.dashboard')->with('title', 'Dashboard Page');
+
+		if( Sentry::check() )
+			return View::make('user.dashboard')->with('title', 'Dashboard Page');
+		else
+			return Redirect::to('login')->with('flash_message', 'You need to be logged in to view this page!');
 	}
 
 }
