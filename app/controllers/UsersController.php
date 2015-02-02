@@ -10,7 +10,7 @@ class UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return Hash::make('c00kies');
 	}
 
 	/**
@@ -166,8 +166,15 @@ class UsersController extends \BaseController {
 	 */
 	public function logout() {
 		
-		View::share('title', 'Logout Page');
+		if( Sentry::check() ) {
 
+			Sentry::logout();
+			return Redirect::to('login')
+			 	->with('flash_message', 'Successfully logged out!');
+
+		}
+
+		//View::share('title', 'Logout Page');
 		//return $this->layout->content = "logout page";
 	}
 

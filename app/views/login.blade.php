@@ -11,7 +11,7 @@
 			<!--<h1>Login page!</h1>-->
 			
 			<!--<form class="form-horizontal" role="form">-->
-			{{ Form::open( [ 'class' => 'form-horizontal col-md-offset-2', 'role' => 'form', 'route' => 'login' ] ) }}
+			{{ Form::open( [ 'class' => 'form-horizontal col-md-offset-2', 'role' => 'form', 'route' => 'login', 'method' => 'post' ] ) }}
 
 			  <div class="form-group">
 			    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
