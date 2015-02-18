@@ -23,3 +23,4 @@ Route::get( 'logout', [ 'uses' => 'UsersController@logout' ] );
 Route::get( 'register', [ 'uses' => 'UsersController@register' ] );
 //Route::get( 'dashboard', [ 'before' => 'auth', 'uses' => 'UsersController@dashboard' ] );
 Route::get( 'dashboard', [ 'uses' => 'UsersController@dashboard' ] );
+Route::get( 'u/{user}', [ 'uses' => 'UsersController@show' ] );

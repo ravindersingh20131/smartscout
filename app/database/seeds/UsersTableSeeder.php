@@ -32,7 +32,8 @@ class UsersTableSeeder extends Seeder {
     	    'email'     => 'hdaza@smartscout.me',
     	    'password'  => 'c00kies',
     	    'activated' => true,
-    	    'first_name' => 'Hamilton'
+    	    'first_name' => 'Hamilton',
+    	    'username' => 'hdaza'
     	));
 
     	/*if( !$adminGroup )

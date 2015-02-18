@@ -9,14 +9,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <span><a class="navbar-brand" href="#">Brand</a></span>
+      {{ Form::open() }}
+        <!--<input type="text" class="form-control" />-->
+      {{ Form::close() }}
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/{{ Sentry::getUser()->username }}"><span><img src="http://placehold.it/32x32" width="32" height="32" /></span> {{ Sentry::getUser()->first_name }}</a></li>
+        <!--<li><a href="#">Home</a></li>-->
+        <li><a href="/u/{{ Sentry::getUser()->username }}"><span><img src="http://placehold.it/32x32" width="32" height="32" /></span> {{ Sentry::getUser()->first_name }}</a></li>
         <!--<li><a href="#">Inbox</a></li>
         <li><a href="#">Friends</a></li>-->
 

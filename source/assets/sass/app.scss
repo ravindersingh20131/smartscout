@@ -92,3 +92,68 @@
 }
 
 /** END SIDEBAR **/
+
+/** profile styles **/
+
+.profile-wrap {
+
+	/*@extend .row;*/
+	padding: 0;
+
+	#sidebar-nav {
+		/*@extend .col-md-2;*/
+	}
+
+	#content {
+		/*@extend .col-md-9;
+		@extend .col-lg-8;*/
+		padding: 0;
+
+		& > ul {
+			background-color: #f5f5f5;
+
+			& li {
+				padding: 20px 80px 10px 80px;
+				border-bottom: 1px solid #ddd;
+				border-right: 1px solid #ddd;
+				text-align: center;
+
+				& > a {
+					border-bottom: none;
+				}
+				& > a:hover {
+					background-color: transparent;
+				}
+			}
+
+			& li.active {
+				background-color: #fff;
+				border-right: 1px solid #ddd;
+				border-bottom: 0;
+				font-weight: bold;
+			}
+		}		
+	}
+
+	#sidebar {
+		/*@extend .col-md;*/
+		padding: 0 !important;
+	}
+}
+
+.removeGutters {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.profile-navi {
+	/*padding-left: 5px;*/
+	background-color: #f5f5f5;
+
+	& li {
+		list-style-type: none;
+		/*padding: 20px 80px 0 80px;*/
+	}
+}
+
+/** end profile styles **/

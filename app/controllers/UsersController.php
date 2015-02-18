@@ -36,15 +36,15 @@ class UsersController extends \BaseController {
 	}
 
 	/**
-	 * Display the specified resource.
+	 * Show user profile
 	 * GET /users/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show( $profile )
 	{
-		//
+		return View::make('user.profile')->with('title', $profile . "'s Profile");
 	}
 
 	/**
