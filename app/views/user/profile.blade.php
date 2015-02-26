@@ -14,11 +14,11 @@
 			<ul class="profile_stats">
 				<li>
 					<span>4,517</span>
-					<span>profile <br> views</span>
+					<span>profile views</span>
 				</li>
 				<li>
 					<span>2,417</span>
-					<span>profile <br> likes</span>
+					<span>profile likes</span>
 				</li>
 			</ul> <!-- end profile_stats -->
 

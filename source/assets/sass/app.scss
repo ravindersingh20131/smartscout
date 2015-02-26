@@ -194,6 +194,10 @@
 					background-color: transparent;
 					border: 0;
 				}
+
+				& > a:visited {
+					background-color: transparent;
+				}
 			}
 
 			& li.active {
@@ -239,13 +243,20 @@
 
 		padding-left: 0;
 
-		& li {
+		& > li {
 			list-style-type: none;
+			padding: 10px 5px 10px 5px;
+			border-bottom: 1px solid #ededed;
 		}
+	}
+
+	.profile_stats {
+		margin-bottom: 50px
 	}
 
 	.measurements_container {
 
+		margin-bottom: 50px;
 		& > ul { 
 			
 			padding-left: 0;
@@ -256,8 +267,13 @@
 		}
 	}
 
+	.nationality_container {
+		margin-bottom: 50px;
+	}
+
 	.rep_container {
-		
+
+		margin-bottom: 50px;
 		& ul {
 			
 			padding-left: 0;
