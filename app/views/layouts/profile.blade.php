@@ -15,7 +15,7 @@
 			</div> <!-- end .row -->
 
 			<div class="row">
-				<div class="col-md-3 removeGutters">
+				<div class="col-md-2 col-lg-2 removeGutters">
 
 					<div id="sidebar">
 						@include('includes.profile.sidebar')
@@ -23,7 +23,7 @@
 
 				</div>
 
-				<div class="col-md-9 removeGutters">
+				<div class="col-md-10 removeGutters">
 					<div id="content">
 						@yield('content')
 					</div> <!-- end #content -->
