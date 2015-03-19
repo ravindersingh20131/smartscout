@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserTalenttypeTable extends Migration {
+class CreateAlbumTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,15 @@ class CreateUserTalenttypeTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create( 'user_talenttype', function( Blueprint $t ) {
+		Schema::create( 'album', function( Blueprint $t ) {
 
-			$t->increments( 'talent_id' )->unsigned();
+			$t->increments( 'album_id' )->unique()->unsigned();
 			$t->integer( 'my_id' )->unique()->unsigned();
 			$t->foreign( 'my_id' )->references( 'my_id' )->on( 'users' );
-			$t->timestamps();
-
+			$t->string( 'name', 255 );
+			$t->smallInteger( 'visibility' );
+			$t->dateTime( 'created_on' );
+			
 		});
 	}
 
@@ -29,11 +31,11 @@ class CreateUserTalenttypeTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table( 'user_talenttype', function( Blueprint $t ) {
-			$t->dropForeign( 'user_talenttype_my_id_foreign' );
+		Schema::table('album', function( $t ) {
+			$t->dropForeign( 'album_my_id_foreign' );
 		});
-
-		Schema::drop( 'user_talenttype' );
+		
+		Schema::drop( 'album' );
 	}
 
 }

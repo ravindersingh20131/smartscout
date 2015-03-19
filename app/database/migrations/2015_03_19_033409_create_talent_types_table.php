@@ -16,6 +16,7 @@ class CreateTalentTypesTable extends Migration {
 			$t->increments( 'talent_id' )->unsigned();
 			$t->string( 'talent_class', 15 );
 			$t->string( 'talent_description', 45 ); //change to text field since its a description
+			$t->timestamps();
 		});
 	}
 
