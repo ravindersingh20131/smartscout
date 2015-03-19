@@ -29,10 +29,6 @@ class CreateUserTalenttypeTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table( 'user_talenttype', function( Blueprint $t ) {
-			$t->dropForeign( 'user_talenttype_my_id_foreign' );
-		});
-
 		Schema::drop( 'user_talenttype' );
 	}
 

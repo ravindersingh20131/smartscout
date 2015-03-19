@@ -13,6 +13,7 @@ class CreateFileTable extends Migration {
 	public function up()
 	{
 		Schema::create( 'file', function( Blueprint $t ) {
+
 			$t->increments( 'file_id' )->unsigned();
 			$t->string( 'name', 255 );
 			$t->longText( 'url' );
@@ -22,6 +23,7 @@ class CreateFileTable extends Migration {
 			$t->string( 'file_type', 255 );
 
 		});
+
 	}
 
 	/**
@@ -31,6 +33,7 @@ class CreateFileTable extends Migration {
 	 */
 	public function down()
 	{
+
 		Schema::drop( 'file' );
 	}
 

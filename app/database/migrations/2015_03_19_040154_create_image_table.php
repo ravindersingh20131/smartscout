@@ -22,7 +22,6 @@ class CreateImageTable extends Migration {
 			$t->smallInteger( 'visibility' )->unsigned();
 			$t->dateTime('created_on');
 
-			$t->foreign( 'file_id' )->references( 'file' )->on( 'file_id' );
 			$t->foreign( 'my_id' )->references( 'my_id' )->on( 'users' );
 			$t->foreign( 'album_id' )->references( 'album_id' )->on( 'album' );
 
@@ -36,12 +35,6 @@ class CreateImageTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('image', function( $t ) {
-			$t->dropForeign( 'image_file_id_foreign' );
-			$t->dropForeign( 'image_my_id_foreign' );
-			$t->dropForeign( 'image_album_id_foreign' );
-		});
-
 		Schema::drop( 'image' );
 	}
 
