@@ -14,7 +14,7 @@ class UsersTable extends Migration {
 	{
 		if( Schema::hasTable('users') ) {
 
-			Schema::table('users', function( $t ) {
+			Schema::table('users', function( Blueprint $t ) {
 				$t->string('username')->nullable()->after('last_name');
 			});
 

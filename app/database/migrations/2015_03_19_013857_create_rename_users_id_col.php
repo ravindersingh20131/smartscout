@@ -12,7 +12,7 @@ class CreateRenameUsersIdCol extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table( 'users', function( $t ) {
+		Schema::table( 'users', function( Blueprint $t ) {
 			$t->renameColumn( 'id', 'my_id' );
 		});
 	}

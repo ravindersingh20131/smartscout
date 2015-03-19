@@ -12,7 +12,7 @@ class CreateUserProfileTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create( 'user_profile', function( $t ) {
+		Schema::create( 'user_profile', function( Blueprint $t ) {
 			
 			$t->increments( 'profile_id' )->unsigned();
 			$t->integer( 'my_id' )->unique()->unsigned();
