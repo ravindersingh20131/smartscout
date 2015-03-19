@@ -10,7 +10,8 @@
 		"way/generators": "~2.0",
 		"sajjadrad/invi": "dev-master",
 		"nesbot/Carbon": "*",
-		"fzaninotto/faker": "1.5.*@dev"
+		"fzaninotto/faker": "1.5.*@dev",
+		"doctrine/dbal": "v2.4.2"
 	},
 	"autoload": {
 		"classmap": [
