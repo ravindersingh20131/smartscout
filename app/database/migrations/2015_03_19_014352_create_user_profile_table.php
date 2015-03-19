@@ -49,10 +49,11 @@ class CreateUserProfileTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('user_profile');
-		Schema::table( 'user_profiles', function( $t ) {
-			$t->dropForeign('users_my_id_foreign');
+		Schema::table( 'user_profile', function( $t ) {
+			$t->dropForeign('user_profile_my_id_foreign');
 		});
+
+		Schema::drop('user_profile');
 	}
 
 }
