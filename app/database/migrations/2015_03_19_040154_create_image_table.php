@@ -22,7 +22,7 @@ class CreateImageTable extends Migration {
 			$t->smallInteger( 'visibility' )->unsigned();
 			$t->dateTime('created_on');
 
-			$t->foreign( 'my_id' )->references( 'my_id' )->on( 'users' );
+			$t->foreign( 'my_id' )->references( 'id' )->on( 'users' );
 			$t->foreign( 'album_id' )->references( 'album_id' )->on( 'album' );
 
 		});

@@ -33,7 +33,6 @@ class CreateFileTable extends Migration {
 	 */
 	public function down()
 	{
-
 		Schema::drop( 'file' );
 	}
 

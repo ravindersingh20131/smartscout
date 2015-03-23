@@ -16,11 +16,11 @@ class CreateAlbumTable extends Migration {
 
 			$t->increments( 'album_id' )->unique()->unsigned();
 			$t->integer( 'my_id' )->unique()->unsigned();
-			$t->foreign( 'my_id' )->references( 'my_id' )->on( 'users' );
+			$t->foreign( 'my_id' )->references( 'id' )->on( 'users' );
 			$t->string( 'name', 255 );
 			$t->smallInteger( 'visibility' );
 			$t->dateTime( 'created_on' );
-			
+
 		});
 	}
 
@@ -31,9 +31,6 @@ class CreateAlbumTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('album', function( $t ) {
-			$t->dropForeign( 'album_my_id_foreign' );
-		});
 		
 		Schema::drop( 'album' );
 	}

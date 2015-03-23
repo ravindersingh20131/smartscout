@@ -16,7 +16,7 @@ class CreateUserTalenttypeTable extends Migration {
 
 			$t->increments( 'talent_id' )->unsigned();
 			$t->integer( 'my_id' )->unique()->unsigned();
-			$t->foreign( 'my_id' )->references( 'my_id' )->on( 'users' );
+			$t->foreign( 'my_id' )->references( 'id' )->on( 'users' );
 			$t->timestamps();
 
 		});

@@ -16,7 +16,7 @@ class CreateUserProfileTable extends Migration {
 			
 			$t->increments( 'profile_id' )->unsigned();
 			$t->integer( 'my_id' )->unique()->unsigned();
-			$t->foreign( 'my_id' )->references( 'my_id' )->on( 'users' );
+			$t->foreign( 'my_id' )->references( 'id' )->on( 'users' );
 			$t->smallInteger( 'height' )->unsigned();
 			$t->string( 'hair_color', 10 );
 			$t->string( 'eye_color', 10 );
