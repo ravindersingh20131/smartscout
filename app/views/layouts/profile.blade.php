@@ -7,7 +7,10 @@
 	</head>
 
 	<body>
-		<div class="container-fluid profile-wrap">
+		<div class="container-fluid">
+
+			<div class="profile-wrap">
+
 			<div class="row">
 				<div class="navigation" role="navigation">
 					@include('user.navi')
@@ -29,6 +32,9 @@
 					</div> <!-- end #content -->
 				</div>
 			</div> <!-- end .row -->
+			
+			</div> <!-- end .profile-wrap -->
+
 		</div> <!-- end .container -->
 	</body>
 

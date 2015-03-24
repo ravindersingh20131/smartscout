@@ -213,6 +213,7 @@
 	#sidebar {
 		/*@extend .col-md;*/
 		padding: 0 !important;
+		height: 100%;
 	}
 }
 
@@ -290,15 +291,30 @@
 
 	padding-left: 50px;
 
-
-	& > p span {
-		font-size: 15px;
-		text-transform: uppercase;
-		font-weight: bold;
+	.sub_pics_container > p {
+		margin-bottom: 1px;
 	}
 
-	& > p button[type="submit"] {
-		float: right;
+	.photobooks_heading {
+
+		padding: 0px;
+		margin-bottom: 10px;
+
+		& p {
+			margin-bottom: 0;
+		}
+
+		& > p span {
+			font-size: 15px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		& > p button[type="submit"] {
+			float: right;
+			margin-right: 18px;
+		}
+
 	}
 }
 

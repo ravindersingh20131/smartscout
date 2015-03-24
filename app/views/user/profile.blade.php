@@ -1,6 +1,7 @@
 @extends( 'layouts.profile' )
 
 @section( 'content' )
+
 	<ul class="nav nav-tabs nav-justified">
 		<li class="active">Profile</li>
 		<li><a href="#">Photobooks</a></li>
@@ -9,7 +10,8 @@
 
 	<div class="content_container">
 
-		<div class="col-md-2 profile_info_container">
+		<div class="col-md-2">
+			<div class="profile_info_container">
 
 			<ul class="profile_stats">
 				<li>
@@ -69,24 +71,37 @@
 					</li>
 				</ul>
 			</div> <!-- end .rep_container -->
-
-		</div> <!-- end profile_info_container -->
-
-		<div class="row">
-			<div class="col-md-7 main_content">
-				<p><span>Photobooks</span> <button type="submit" class="btn btn-secondary">View All</button></p>
-				<div class="col-md-10 removeGutters">
-					<p>test</p>
-				</div> <!-- end .col-md-10 -->
-
-				<div class="col-md-2 removeGutters">
-					<p>test 2 1 col</p>
-					<p>test 2 2 col</p>
-					<p>test 2 3 col</p>
-					<p>test 2 4 col</p>
-				</div> <!-- end .col-md-2 -->
-			</div> <!-- end .main_content -->
+			</div> <!-- end .profile_info_container -->
 		</div> <!-- end .row -->
+
+		<div class="col-md-7">
+
+			<div class="row">
+
+				<div class="main_content">
+
+					<div class="col-md-9 photobooks_heading">
+						<p><span>Photobooks</span> <button type="submit" class="btn btn-secondary">View All</button></p>
+					</div>
+					
+					<div class="col-md-7 removeGutters">
+						<p><img src="http://placehold.it/400x400" /></p>
+					</div> <!-- end .col-md-10 -->
+
+					<div class="col-md-2 removeGutters">
+
+						<div class="sub_pics_container">
+							<p><img src="http://placehold.it/100x99" /></p>
+							<p><img src="http://placehold.it/100x99" /></p>
+							<p><img src="http://placehold.it/100x99" /></p>
+							<p><img src="http://placehold.it/100x99" /></p>
+						</div> <!-- end .sub_pics_container -->
+
+					</div> <!-- end .col-md-2 -->
+
+				</div> <!-- end .row -->
+
+		</div> <!-- end .col-md-7 -->
 
 	</div> <!-- end .content_container -->
 @stop
