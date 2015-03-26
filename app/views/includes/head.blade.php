@@ -8,7 +8,7 @@
 		<script src="{{ URL::asset('assets/js/require.js') }}"></script>
 
 		@if( Route::currentRouteName() == 'user_profile' )
-			<script src="{{ URL::asset( 'assets/js/chartjs/chart.js' ) }}"></script>
+			<script src="{{ URL::asset( 'assets/js/chartjs/Chart.min.js' ) }}"></script>
 
 			<script type="text/javascript">
 
