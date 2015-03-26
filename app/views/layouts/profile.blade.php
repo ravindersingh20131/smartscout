@@ -4,7 +4,7 @@
 	<head>
 		@include('includes.head')
 		<!--<scripts></scripts>-->
-	</head>
+	</head> 
 
 	<body>
 		<div class="container-fluid">
@@ -18,13 +18,14 @@
 			</div> <!-- end .row -->
 
 			<div class="row">
+			
 				<div class="col-md-2 col-lg-2 removeGutters">
 
 					<div id="sidebar">
 						@include('includes.profile.sidebar')
 					</div>
 
-				</div>
+				</div> <!-- end .col-md-2 -->
 
 				<div class="col-md-10 removeGutters">
 					<div id="content">
