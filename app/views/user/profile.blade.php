@@ -74,7 +74,7 @@
 			</div> <!-- end .profile_info_container -->
 		</div> <!-- end .row -->
 
-		<div class="col-md-7">
+		<div class="col-md-7 col-md-offset-1">
 
 			<div class="row">
 
@@ -99,7 +99,57 @@
 
 					</div> <!-- end .col-md-2 -->
 
-				</div> <!-- end .row -->
+				</div> <!-- end .main_content -->
+
+			</div> <!-- end .row -->
+
+			<div class="row stats_graphs">
+
+				<div class="col-md-4">
+
+					<div class="pb_views_container">
+						<h4>Photobook Views</h4>
+						<div class="pb_graph">
+							<canvas id="pb_chart" width="200" height="150"></canvas>
+						</div>
+
+						<div class="pb_breakdown">
+
+							<ul>
+								<li><span>33%</span> Arie Photography</li>
+								<li><span>25%</span> Debeers Campaign</li>
+								<li><span>6%</span> Hair Styles</li>
+							</ul>
+
+						</div> <!-- end .pb_breakdown -->
+
+					</div> <!-- end pb_views_container -->
+
+				</div> <!-- end .col-md-4 -->
+
+				<div class="col-md-4">
+
+					<div class="pv_container">
+
+						<h4>Profile Views</h4>
+
+						<div class="pv_graph">
+							<canvas id="pv_chart" width="200" height="150"></canvas>
+						</div> <!-- end .pv_graph -->
+
+						<div class="pv_breakdown">
+							<ul>
+								<li><span>63%</span> Agents / Agencies</li>
+								<li><span>24%</span> Creatives</li>
+								<li><span>13%</span> Other</li>
+							</ul>
+						</div> <!-- end .pv_breakdown -->
+
+					</div> <!-- end .pv_container -->
+
+				</div> <!-- end .col-md-4 -->
+
+			</div> <!-- end .row -->
 
 		</div> <!-- end .col-md-7 -->
 

@@ -30,6 +30,7 @@ var paths = {
         fontawesome: './components/fontawesome/scss',
         fontawesomeCss: './components/fontawesome/css',
         requirejs: './components/requirejs',
+        chartjs: './components/chartjs',
         bower: "./components/",
         css: "source/assets/sass/",
         js: "source/assets/js/"
@@ -92,6 +93,8 @@ gulp.task('minify-bootstrapjs', function() {
             .pipe( gulp.dest( paths.out.js + '/javascripts' ) )
             .pipe( notify( { message: 'twitter bootstrap copied and minified!' } ) );
 });
+
+//make gulp task for copying chartjs
 
 /*elixir(function(mix) {
     
