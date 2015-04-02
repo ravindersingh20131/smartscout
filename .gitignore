@@ -10,3 +10,4 @@ app/config/local/
 app/storage/debugbar/
 node_modules/
 public/assets/source
+.idea
