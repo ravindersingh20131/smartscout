@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder {
 
         } catch( Cartalyst\Sentry\Users\UserNotFoundException $e ) {
 
-            echo "User 'Leo' was not found.. Creating user...";
+            echo "User 'Leo' was not found.. Creating user...\n";
 
             //create leo's user
             $user = Sentry::createUser(array(
@@ -36,7 +36,7 @@ class UsersTableSeeder extends Seeder {
 
             $user->save();
 
-            echo "Leo's user credentials was created!";
+            echo "Leo's user credentials was created!\n";
 
         }
 
@@ -46,7 +46,7 @@ class UsersTableSeeder extends Seeder {
 
         } catch( Cartalyst\Sentry\Users\UserNotFoundException $e ) {
 
-            echo "User 'Hamilton' was not found.. Creating user...";
+            echo "User 'Hamilton' was not found.. Creating user...\n";
 
             //create Hamilton's user
             $user = Sentry::createUser(array(
@@ -62,7 +62,7 @@ class UsersTableSeeder extends Seeder {
 
             $user->save();
 
-            echo "Hamilton's user credentials was created!";
+            echo "Hamilton's user credentials was created!\n";
         }
 
         try {
@@ -71,7 +71,7 @@ class UsersTableSeeder extends Seeder {
 
         } catch( Cartalyst\Sentry\Users\UserNotFoundException $e ) {
 
-            echo "User 'Ravinder' was not found.. Creating user...";
+            echo "User 'Ravinder' was not found.. Creating user...\n";
 
             //create ravi's user
             $user = Sentry::createUser(array(
@@ -87,7 +87,7 @@ class UsersTableSeeder extends Seeder {
 
             $user->save();
 
-            echo "Ravinder's user credentials was created!";
+            echo "Ravinder's user credentials was created!\n";
 
         }
 
